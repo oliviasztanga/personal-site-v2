@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './styles.module.scss'
-
 import Hello from '../Hello'
 
+import Nav from '../Nav'
+
 const Layout = ({ children }) => {
-    const [ navOpen, setNavOpen ] = useState(false)
-    const toggleNav = () => setNavOpen(!navOpen)
 
     return (
         <div className={styles.layout}>
+            <Nav />
             <div className={styles.fixed}>
                 <Hello />
             </div>

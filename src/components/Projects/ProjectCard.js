@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles.module.scss'
-
 import { openInNewTab } from '../../utilities/misc'
 
 const ProjectCard = ({ language, title, github, description }) => {

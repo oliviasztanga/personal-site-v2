@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import styles from './styles.module.scss'
-
 import { github } from '../../assets/content/links'
-
 import { SVG } from '../Misc'
 
 const Copyright = () => {

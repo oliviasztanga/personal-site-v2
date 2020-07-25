@@ -1,0 +1,126 @@
+@import '../../assets/stylesheets/application.scss';
+
+.hidden {
+    visibility: hidden;
+}
+
+.background {
+    background: linear-gradient(215.42deg, $color-lover-blue 0%, rgba($color-white, 0) 100%), $color-lover-pink;
+    height: 5rem;
+    width: 5rem;
+    top: 2rem;
+    left: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1999;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 2000;
+
+    & > div:first-child {
+        width: max-content;
+        transform: translateX(-50%);
+    }
+}
+
+.link {
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-offwhite 50%);
+    background-size: 220%;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    transition: all .4s;
+
+    h2 {
+        color: $color-offwhite;
+        transition: all .05s;
+    }
+
+    span {
+        color: $color-offwhite;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-position: 100%;
+        transform: translateX(1rem);
+
+        h2 { color: $color-lover-pink; }
+
+        span { color: $color-lover-pink; }
+    }
+}
+
+.toggle {
+    background-color: $color-offwhite;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 5rem;
+    left: 2rem;
+    position: fixed;
+    text-align: center;
+    top: 2rem;
+    width: 5rem;
+    z-index: 2001;
+
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+@mixin hamburger {
+    margin-top: 1.5rem;
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+        background-color: $color-lover-pink;
+        display: inline-block;
+        height: 2px;
+        width: 3rem;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        left: 0;
+        position: absolute;
+        transition: all .2s;
+    }
+
+    &::before { top: -.8rem; }
+    &::after { top: .8rem; }
+}
+
+.hamburger {
+    &_inactive {
+        @include hamburger;
+    }
+
+    &_active {
+        @include hamburger;
+        background-color: transparent !important;
+
+        &::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.toggle:hover .hamburger_inactive::before { top: -1rem; }
+.toggle:hover .hamburger_inactive::after { top: 1rem; }

@@ -1,10 +1,8 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './styles.module.scss'
-
 import { github, linkedin, email } from '../../assets/content/links'
 import resume from '../../assets/content/resume.pdf'
-
 import { openInNewTab } from '../../utilities/misc'
 import { SVG } from '../Misc'
 

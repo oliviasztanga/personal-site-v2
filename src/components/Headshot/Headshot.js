@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles.module.scss'
-
 import headshot from '../../assets/images/headshot.png'
 
 const Headshot = () => {

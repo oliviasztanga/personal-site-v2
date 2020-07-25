@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { featuredProjects } from '../../assets/content/projects'
-
 import Section from '../Section'
 import ProjectCard from './ProjectCard'
 

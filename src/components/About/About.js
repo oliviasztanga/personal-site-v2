@@ -1,6 +1,4 @@
 import React from 'react'
-import styles from './styles.module.scss'
-
 import Section from '../Section'
 import Skills from './Skills'
 
