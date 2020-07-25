@@ -1,0 +1,52 @@
+@import '../../assets/stylesheets/application.scss';
+
+.scroll {
+    align-items: center;
+    display: flex;
+    color: $color-offblack;
+    width: 100%;
+}
+
+.skills {
+    // align-items: flex-end;
+    // display: flex;
+    list-style: none;
+    overflow: auto;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+        width: 0px;  // remove scrollbar spacing
+        background: transparent;  // make scrollbar invisible
+    }
+}
+
+.item {
+    display: inline-block;
+    padding: 1.75rem 2rem 0 2rem;
+}
+
+@mixin base_chevron {
+    fill: $color-offblack;
+    height: 2.5rem;
+    transition: all .2s;
+    width: 2.5rem;
+
+    // &:hover {
+    //     fill: rgba($color-offblack, .5)
+    // }
+  }
+
+.chevron {
+
+    &Left {
+        @include base_chevron();
+        transform: rotate(90deg);
+        margin-right: 1.5rem;
+    }
+
+    &Right {
+        @include base_chevron();
+        transform: rotate(-90deg);
+        margin-left: 1.5rem;
+    }
+}

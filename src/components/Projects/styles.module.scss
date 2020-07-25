@@ -1,0 +1,24 @@
+@import '../../assets/stylesheets/application.scss';
+
+.projectCard {
+    background: linear-gradient(
+        196.7deg, 
+        rgba($color-lover-blue, 0.5) 0%, 
+        rgba($color-white, 0) 72.99%),
+        rgba($color-lover-pink, 0.15);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 3rem;
+    transition: all .4s;
+    width: 100%;
+
+    &:hover {
+        transform: translateX(-2.5rem);
+    }
+}
+
+// add responsive styling to reduce width & accomodate for the transform!!!

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla/Karla-Bold.ttf');
+    src: url('../fonts/Karla/Karla-BoldItalic.ttf');
+    src: url('../fonts/Karla/Karla-Italic.ttf');
+    src: url('../fonts/Karla/Karla-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('../fonts/Inconsolata/Inconsolata-Bold.ttf');
+    src: url('../fonts/Inconsolata/Inconsolata-Regular.ttf');
+}
+
+// fonts
+$font-default: Karla, sans-serif;
+$font-accent: Inconsolata;
+
+// colors
+$color-white: #fff;
+$color-black: #000;
+$color-offwhite: #f7f7f7;
+$color-offblack:  #191919;
+$color-lover-pink: #e3abce;
+$color-lover-violet: #ceb6d9;
+$color-lover-blue: #a2c8ec;
+$color-lover-peach: #fbcabb;
+$color-lover-peacher: #f9b0c3;
+
+// margins
+.mb--xxs { margin-bottom: .5rem; }
+.mb--xs { margin-bottom: 1rem; }
+.mb--sm { margin-bottom: 2rem; }
+.mb--md { margin-bottom: 4rem; }
+.mb--lg { margin-bottom: 6rem; }
+
+// padding
+.p--sm { padding: 2.5rem; }
+
+// base
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: $color-offwhite;
+}
+
+svg {
+    fill: currentColor;
+}

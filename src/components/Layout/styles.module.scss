@@ -1,0 +1,14 @@
+.layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.fixed {
+    grid-column: 1;
+    position: fixed;
+    height: 100vh;
+}
+.scroll {
+    grid-column: 2;
+    overflow-y: scroll;
+}

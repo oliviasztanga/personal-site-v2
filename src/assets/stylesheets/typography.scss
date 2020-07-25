@@ -1,0 +1,77 @@
+.h--1 {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('../images/lover-gradient.jpg');
+    background-size: cover;
+    color: transparent;
+    font-family: $font-default;
+    font-size: 4vw;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.h--num {
+    color: $color-lover-pink;
+    display: inline;
+    font-family: $font-accent;
+    font-size: 2rem;
+}
+
+.h--2 {
+    color: $color-offblack;
+    display: inline-block;
+    font-family: $font-default;
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.h--3 {
+    color: $color-offblack;
+    display: inline;
+    font-family: $font-default;
+    font-size: 1.6rem;
+}
+
+p {
+    color: $color-offblack;
+    font-family: $font-default;
+}
+
+.p {
+    &--20 { font-size: 2rem; }
+    &--16 { font-size: 1.6rem; }
+    &--14 { font-size: 1.4rem; }
+    &--12 { font-size: 1.2rem; }
+}
+
+.acc {
+    &--14 { font-family: $font-accent; font-size: 1.4rem; font-weight: 100; }
+    &--12 { font-family: $font-accent; font-size: 1.2rem; font-weight: 100; }
+}
+
+.type--pink { color: $color-lover-pink; }
+.type--bold { font-weight: bold; }
+.type--upcase { text-transform: uppercase; }
+
+.daylight {
+    animation: daylight 3s infinite ease-in;
+}
+
+@keyframes daylight {
+    0% {color: #fbcabb}
+    20% {color: #f9b0c3}
+    40% {color: #e3abce}
+    60% {color: #ceb6d9}
+    80% {color: #a2c8ec}
+    100% {color: #fbcabb}
+}
+
+.link, .link:visited, .link:link, .link:active {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover {
+        animation: daylight 1s infinite ease-in;
+    }
+}

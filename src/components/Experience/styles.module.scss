@@ -1,0 +1,16 @@
+@import '../../assets/stylesheets/application.scss';
+
+.tabPanel {
+    padding: 0 2rem;
+}
+
+.bullets {
+    color: $color-offblack;
+    font-family: $font-default;
+    font-size: 1.2em;
+    list-style: none;
+}
+
+.bullet {
+    margin-bottom: 5px;
+}
