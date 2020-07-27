@@ -9,6 +9,18 @@
     h1:first-child {
         margin-top: auto;
     }
+
+    @media (max-width: $breakpoint-tablet-x) and (min-width: $breakpoint-tablet-y) {
+        & > p {
+            font-size: 1.25rem;
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet-y) {
+        h1 {
+            font-size: 7vw;
+        }
+    }
 }
 
 .socials {
@@ -21,6 +33,15 @@
         height: 2rem;
         width: 2rem;
     }
+
+    @media (max-width: $breakpoint-tablet-x) and (min-width: $breakpoint-tablet-y) {
+        max-width: 15rem;
+        svg {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+    
 }
 
 .socialsItem {
@@ -34,5 +55,9 @@
 
     p {
         color: currentColor;
+    }
+
+    @media (max-width: $breakpoint-tablet-x) and (min-width: $breakpoint-tablet-y) {
+        grid-column-gap: 3px;
     }
 }

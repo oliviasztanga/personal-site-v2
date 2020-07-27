@@ -19,6 +19,10 @@
     &:hover {
         transform: translateX(-2.5rem);
     }
-}
 
-// add responsive styling to reduce width & accomodate for the transform!!!
+    @media (max-width: $breakpoint-mobile) {
+        &:hover {
+            transform: none;
+        }
+    }
+}

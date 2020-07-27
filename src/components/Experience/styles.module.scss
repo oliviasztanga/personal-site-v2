@@ -2,6 +2,14 @@
 
 .tabPanel {
     padding: 0 2rem;
+
+    @media (max-width: $breakpoint-tablet-x) and (min-width: $breakpoint-tablet-y) {
+        padding-top: 2rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding-top: 2rem;
+    }
 }
 
 .bullets {

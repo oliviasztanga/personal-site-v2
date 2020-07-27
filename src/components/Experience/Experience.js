@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
-import { Tabs, Tab, makeStyles } from '@material-ui/core'
+import { Tabs, Tab, makeStyles, useMediaQuery } from '@material-ui/core'
 import styles from './styles.module.scss'
 import experience from '../../assets/content/experience'
 import Section from '../Section'
@@ -25,21 +25,39 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+const useAltStyles = makeStyles((theme) => ({
+    root: {
+        backgroundColor: 'transparent',
+        display: 'flex',
+        flexGrow: 1,
+        minHeight: '32rem', //reconsider this?
+        justifyContent: 'flex-start',
+        flexDirection: "column"
+    },
+    tabs: {
+        borderBottom: `1px solid ${theme.palette.divider}`,
+        minWidth: 'min-content'
+    }
+}))
+
 const Experience = () => {
+    const isTabletY = useMediaQuery('(max-width: 1000px) and (min-width: 850px)')
+    const isPhone = useMediaQuery('(max-width: 500px)')
     const overrides = useStyles()
+    const altOverrides = useAltStyles()
     const [tab, setTab] = useState(0)
     const changeTab = (event, newValue) => setTab(newValue)
 
     return (
         <Section number={'02'} title="Experience" >
             
-            <div className={overrides.root}>
+            <div className={isTabletY || isPhone ? altOverrides.root : overrides.root}>
                 <Tabs
-                    orientation="vertical"
+                    orientation={isTabletY || isPhone ? "horizontal" : "vertical"}
                     variant="scrollable"
                     value={tab}
                     onChange={changeTab}
-                    className={overrides.tabs}
+                    className={isTabletY || isPhone ? altOverrides.tabs : overrides.tabs}
                 >
                     {experience.map(({ organization }) => <Tab 
                         key={organization}

@@ -26,6 +26,7 @@ const Nav = () => {
                         [['01', 'About'], ['02', 'Experience'], ['03', 'Projects']]
                         .map(([ number, title ]) => {
                             return <div 
+                            key={number}
                             className={styles.link}
                             onClick={() => handleClick(title)}
                             >

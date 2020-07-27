@@ -1,3 +1,5 @@
+@import '../../assets//stylesheets/application.scss';
+
 .section {
     padding: 2.5rem;
     margin-top: 5rem;
@@ -5,6 +7,14 @@
 
 .content {
     padding: 0 5rem;
+
+    @media (max-width: $breakpoint-tablet-x) and (min-width: $breakpoint-tablet-y) {
+        padding: 0 2.5rem 0 5rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: .5rem;
+    }
 }
 
 .maxWidth55 {

@@ -1,6 +1,16 @@
+@import '../../assets/stylesheets/application.scss';
+
 .container {
     height: 100vh;
     overflow: hidden;
+
+    @media (max-width: $breakpoint-tablet-y) and (min-width: $breakpoint-mobile) {
+        display: none;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        height: 60vh;
+    }
 }
 
 .headshot {
